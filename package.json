@@ -1,5 +1,5 @@
 {
-  "name": "react_typescript_tailwind_amplify_boilerplate",
+  "name": "react-amplify-tailwing-typescript",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,8 +28,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test:unit": "craco test ./src/__tests__/unit --detectOpenHandles",
-    "test": "craco test",
+    "test:unit": "craco test src/__tests__/unit --detectOpenHandles",
+    "test": "craco test --detectOpenHandles",
     "eject": "react-scripts eject",
     "cy:run": "cypress run",
     "cypress:open": "cypress open"

@@ -29,9 +29,13 @@ const ConfirmPage = ({ error, isLoading, handleresendconfirmationcode, handlecon
 
     // side effects
     useEffect(() => {
+        let mounted = true
         const value = localStorage.getItem("@user__email")
-        if (value) {
-            setUserEmail(value)
+        if (mounted && value) {
+           setUserEmail(value)
+        }
+        return () => {
+            mounted = false
         }
     }, [])
 
