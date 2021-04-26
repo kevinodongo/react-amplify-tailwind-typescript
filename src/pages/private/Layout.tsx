@@ -7,13 +7,14 @@ import {
 } from "react-router-dom";
 import Sidebar from '../../components/dashboard/Sidebar';
 import Settings from "./Settings"
+import Feed from "./Feed"
 
 const routes = [
     {
         path: "/dashboard",
         exact: true,
         sidebar: () => <div>Dashboard</div>,
-        main: () => <h2>Dashboard</h2>
+        main: () => <h2><Feed /></h2>
     },
     {
         path: "/settings",
@@ -43,7 +44,7 @@ const Dashboard = ({ handlelogout, user }: IProps) => {
         <div className="relative min-h-screen">
             {/*navigation drawer*/}
             {open &&
-                <div className="absolute inset-y-0 z-50 left-0 w-72 bg-blueGray-100 shadow border-2 border-blueGray-100">
+                <div className="absolute h-full inset-y-0 z-50 left-0 w-72">
                     <Sidebar />
                 </div>
             }
