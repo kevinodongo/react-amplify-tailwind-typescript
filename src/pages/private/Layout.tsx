@@ -6,6 +6,7 @@ import {
     BrowserRouter as Router
 } from "react-router-dom";
 import Sidebar from '../../components/dashboard/Sidebar';
+import Settings from "./Settings"
 
 const routes = [
     {
@@ -17,7 +18,7 @@ const routes = [
     {
         path: "/settings",
         sidebar: () => <div>Settings</div>,
-        main: () => <h2>Settings</h2>
+        main: () => <div><Settings /></div>
     },
     {
         path: "*",
